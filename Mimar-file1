@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mimar - Izbor jezika</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dobrodošli na Mimar</h1>
+  <p>Odaberite jezik, bit ćete automatski preusmjereni:</p>
+
+  <!-- Izbornik jezika -->
+  <select id="jezici" onchange="idiNaJezik(this.value)">
+    <option value="">-- Odaberite jezik --</option>
+    <option value="https://www.apartmanija.hr/apartmani/pag/apartmani-mimar/25744">Hrvatski</option>
+    <option value="https://www.direct-croatia.com/apartments/pag/apartments-mimar/25744">English</option>
+    <option value="https://www.direkt-kroatien.de/ferienwohnungen/pag/appartements-mimar/25744">Deutsch</option>
+    <option value="https://example.com/fr">Français</option>
+    <option value="https://example.com/it">Italiano</option>
+  </select>
+
+  <script>
+    function idiNaJezik(link) {
+      if (link) {
+        window.location.href = link; // Odmah preusmjeri
+      }
+    }
+  </script>
+</body>
+</html>
