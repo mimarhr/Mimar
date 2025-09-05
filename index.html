@@ -20,6 +20,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
     h1 {
       font-size: 2em;
@@ -29,23 +30,22 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       margin-top: 20px;
     }
-    .lang {
-      cursor: pointer;
-      text-align: center;
-    }
-    .lang img {
-      width: 50px;
-      height: 35px;
-      border-radius: 5px;
-      display: block;
-      margin: 0 auto 5px;
-    }
-    .lang span {
+    .lang-btn {
+      background: #ffffffcc;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
       font-size: 1em;
       font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover {
+      background: #ffcc00;
+      color: #000;
     }
   </style>
 </head>
@@ -55,26 +55,11 @@
     <h1>Welcome to the Apartments Mimar in the city of Pag</h1>
     <p>Odaberite jezik / Select your language:</p>
     <div class="languages">
-      <div class="lang" onclick="window.location.href='https://www.horvatorszagapartmanok.net/apartmanok/pag/apartmanok-mimar/25744'">
-        <img src="flags/fr.png" alt="Français">
-        <span>Français</span>
-      </div>
-      <div class="lang" onclick="window.location.href='https://www.vacancescroatie.net/appartements/pag/appartements-mimar/25744'">
-        <img src="flags/es.png" alt="Español">
-        <span>Español</span>
-      </div>
-      <div class="lang" onclick="window.location.href='https://www.alojamientocroacia.es/apartamentos/pag/apartamentos-mimar/25744'">
-        <img src="flags/ro.png" alt="Română">
-        <span>Română</span>
-      </div>
-      <div class="lang" onclick="window.location.href='https://www.apartamentecroatia.com/apartamente/pag/apartamente-mimar/25744'">
-        <img src="flags/nl.png" alt="Nederlands">
-        <span>Nederlands</span>
-      </div>
-      <div class="lang" onclick="window.location.href='https://www.directkroatie.nl/appartementen/pag/appartementen-mimar/25744'">
-        <img src="flags/dk.png" alt="Dansk">
-        <span>Dansk</span>
-      </div>
+      <a class="lang-btn" href="https://www.horvatorszagapartmanok.net/apartmanok/pag/apartmanok-mimar/25744">Français</a>
+      <a class="lang-btn" href="https://www.vacancescroatie.net/appartements/pag/appartements-mimar/25744">Español</a>
+      <a class="lang-btn" href="https://www.alojamientocroatia.es/apartamentos/pag/apartamentos-mimar/25744">Română</a>
+      <a class="lang-btn" href="https://www.apartamentecroatia.com/apartamente/pag/apartamente-mimar/25744">Nederlands</a>
+      <a class="lang-btn" href="https://www.directkroatie.nl/appartementen/pag/appartementen-mimar/25744">Dansk</a>
     </div>
   </div>
 </body>
