@@ -2,53 +2,80 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>Mimar - Izbor jezika</title>
+  <title>Apartmani Mimar - Pag</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      margin-top: 100px;
-      background: #f9f9f9;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     h1 {
       font-size: 2em;
-      color: #333;
+      margin-bottom: 0.5em;
     }
-
-    p {
-      margin-bottom: 20px;
-      color: #555;
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    select {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    .lang {
+      cursor: pointer;
+      text-align: center;
+    }
+    .lang img {
+      width: 50px;
+      height: 35px;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+    .lang span {
+      font-size: 1em;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Dobrodošli na Mimar</h1>
-  <p>Odaberite jezik, bit ćete automatski preusmjereni:</p>
-
-  <!-- Izbornik jezika -->
-  <select id="jezici" onchange="idiNaJezik(this.value)">
-    <option value="">-- Odaberite jezik --</option>
-    <option value="https://www.apartmanija.hr/apartmani/pag/apartmani-mimar/25744">Hrvatski</option>
-    <option value="https://www.direct-croatia.com/apartments/pag/apartments-mimar/25744">English</option>
-    <option value="https://www.direkt-kroatien.de/ferienwohnungen/pag/appartements-mimar/25744">Deutsch</option>
-    <option value="https://example.com/fr">Français</option>
-    <option value="https://example.com/it">Italiano</option>
-  </select>
-
-  <script>
-    function idiNaJezik(link) {
-      if (link) {
-        window.location.href = link; // Odmah preusmjeri
-      }
-    }
-  </script>
+  <div class="overlay">
+    <h1>Dobrodošli na stranice Apartmana Mimar u gradu Pagu</h1>
+    <h1>Welcome to the Apartments Mimar in the city of Pag</h1>
+    <p>Odaberite jezik / Select your language:</p>
+    <div class="languages">
+      <div class="lang" onclick="window.location.href='https://www.horvatorszagapartmanok.net/apartmanok/pag/apartmanok-mimar/25744'">
+        <img src="flags/fr.png" alt="Français">
+        <span>Français</span>
+      </div>
+      <div class="lang" onclick="window.location.href='https://www.vacancescroatie.net/appartements/pag/appartements-mimar/25744'">
+        <img src="flags/es.png" alt="Español">
+        <span>Español</span>
+      </div>
+      <div class="lang" onclick="window.location.href='https://www.alojamientocroacia.es/apartamentos/pag/apartamentos-mimar/25744'">
+        <img src="flags/ro.png" alt="Română">
+        <span>Română</span>
+      </div>
+      <div class="lang" onclick="window.location.href='https://www.apartamentecroatia.com/apartamente/pag/apartamente-mimar/25744'">
+        <img src="flags/nl.png" alt="Nederlands">
+        <span>Nederlands</span>
+      </div>
+      <div class="lang" onclick="window.location.href='https://www.directkroatie.nl/appartementen/pag/appartementen-mimar/25744'">
+        <img src="flags/dk.png" alt="Dansk">
+        <span>Dansk</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
